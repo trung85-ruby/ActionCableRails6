@@ -12,21 +12,21 @@
 
 ActiveRecord::Schema.define(version: 2019_06_28_173358) do
 
-  create_table "contexts", force: :cascade do |t|
+  create_table "contexts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "title"
     t.string "id_from_tc"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "enrollments", force: :cascade do |t|
+  create_table "enrollments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "user_id"
     t.integer "context_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "messages", force: :cascade do |t|
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.text "body"
     t.integer "enrollment_id"
     t.integer "resource_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_06_28_173358) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "resources", force: :cascade do |t|
+  create_table "resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "title"
     t.string "id_from_tc"
     t.integer "context_id"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2019_06_28_173358) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
