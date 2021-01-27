@@ -28,6 +28,7 @@ gem "mysql2"
 gem "dotenv-rails"
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.2'
+gem "anycable-rails", "~> 1.0"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
